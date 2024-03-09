@@ -1,0 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.hero {
+    position: relative;
+    height: 80vh; /* Adjust based on your design */
+    background-image: url('images.jpg'); /* Replace with your image path */
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    padding-top: 10%; /* Adjust based on your design */
+}
+
+.hero button {
+    margin: 10px;
+}
