@@ -4,26 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Title</title>
-    <link rel="stylesheet" href="MSIS website.css"> 
+    <link rel="stylesheet" href="MSIS website.css">
 </head>
 <body>
     <header>
-        <!-- Navigation bar -->
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">Schedule</a></li>
-            </ul>
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">F.A.Q</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Course Title</h1>
-        <p>Course Description</p>
-        <button>Button 1</button>
-        <button>Button 2</button>
+        <!-- Background image or video -->
+        <div class="hero-bg">
+        </div>
+        <div class="hero-content">
+            <h1>MSIS 547</h1>
+            <p>Managing In The Era Of Cloud Computing</p>
+            <div class="buttons">
+                <button>Current UW Students</button>
+                <button>Everyone</button>
+            </div>
+        </div>
     </section>
 
+    <section class="course-overview">
+        <div class="container">
+            <h2><i class="fas fa-info-circle"></i> Course Overview</h2>
+            <p>
+                In the dynamic landscape of technology, Generative AI has emerged as a groundbreaking force, especially in the era of cloud computing. This course is designed to immerse students in the world of Generative AI, offering a comprehensive exploration from foundational theories to cutting-edge real-world applications. Each session blends interactive lectures, group discussions, hands-on coding tutorials, and live exercises, ensuring an engaging and participatory learning environment.
+
+We start with understanding AI's impact on work and creativity, diving into neural networks and deep learning. Progressing through computer vision and transfer learning, students will engage in practical exercises like image classification and text-to-image generation using diffusion models. The journey continues with a look at Natural Language Processing, attention mechanisms, and Transformers, culminating in hands-on experiences with large language models like ChatGPT and exploring the realms of multimodality and foundation models in cloud computing.
+
+The course not only focuses on technical skills but also emphasizes critical thinking, ethical considerations, and real-world problem-solving in the AI domain. A special guest lecture and group presentations will enrich this learning experience, preparing students for advanced academic pursuits or careers in this ever-evolving field.
+                
+            </p>
+        </div>
+    </section>
+
+    <!-- Content sections -->
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="MSIS website.js"></script>
+
+    <div class="schedule-container">
+        <!-- Lectures Column -->
+        <div class="schedule-column">
+          <h2>Lectures</h2>
+          <!-- Lecture Cards -->
+          <div class="card">
+            <div class="card-image lecture-img"></div>
+            <div class="card-content">
+              <span class="card-date">Date XX/XX/XXXX</span>
+              <h3 class="card-title">Lecture 1A: AI and the Future of Work</h3>
+              <p class="card-description">Here we will have a description...</p>
+            </div>
+          </div>
+          <!-- More lecture cards -->
+        </div>
+      
+        <!-- Tutorials Column -->
+        <div class="schedule-column">
+          <h2>Tutorials</h2>
+          <!-- Tutorial Cards -->
+          <div class="card">
+            <div class="card-image tutorial-img"></div>
+            <div class="card-content">
+              <span class="card-date">Date XX/XX/XXXX</span>
+              <h3 class="card-title">Tutorial 2A-2B: Intro to Neural Networks in Python</h3>
+              <p class="card-description">Here we will have a description...</p>
+            </div>
+          </div>
+          <!-- More tutorial cards -->
+        </div>
+      
+        <!-- Resources Column -->
+        <div class="schedule-column">
+          <h2>Resources</h2>
+          <!-- Resource Cards -->
+          <div class="card">
+            <div class="card-image resource-img"></div>
+            <div class="card-content">
+              <span class="card-date">Fri 01/05</span>
+              <h3 class="card-title">Project Presentation Example</h3>
+              <p class="card-description">Here we will have a description...</p>
+            </div>
+          </div>
+          <!-- More resource cards -->
+        </div>
+      </div>
+
+      <div class="assignments">
+        <h2>Assignments</h2>
+        <!-- Assignment cards -->
+        <div class="card assignment">
+            <div class="date">Due Date</div>
+            <div class="info">Homework 2 </div>
+        </div>
+        <!-- Additional assignment cards if needed -->
+    </div>
+
+    <div class="team-section">
+        <h2>Our Team</h2>
+        <div class="team-members">
+            <!-- Repeat this block for each team member -->
+            <div class="team-member">
+                <div class="profile-container">
+                    <img src="Leo.jpg" alt="Team Member Name">
+                    <div class="circles-background"></div>
+                </div>
+                <h3>Team Member Name</h3>
+                <p>Position</p>
+            </div>
+        </div>
+    </div>
+    
+      
 </body>
 </html>

@@ -1,33 +1,297 @@
-body, html {
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background: #4b2e83;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    position: fixed;
     width: 100%;
-    height: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+nav li {
+    padding: 0 1em;
 }
 
+nav a {
+    color: #ffc700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #b7a57a;
+}
+
+/* Hero Section Styles */
 .hero {
-    position: relative;
-    height: 80vh; /* Adjust based on your design */
-    background-image: url('images.jpg'); /* Replace with your image path */
-    background-size: cover;
     text-align: center;
-    color: white;
+    padding-top: 50px; /* Adjust based on fixed nav height */
+    background: url('A.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero h1 {
-    padding-top: 10%; /* Adjust based on your design */
-}
-
-.hero button {
+.buttons button {
     margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b7a57a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+.buttons button:hover {
+    background-color: #4169e1;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.course-overview {
+    background: #f9f9f9; /* Light background for the section */
+    padding: 40px;
+    margin-top: 30px; /* Add some space from the previous section */
+}
+
+.course-overview .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.course-overview h2 {
+    font-size: 2em;
+    color: #333; /* Dark color for the title */
+    margin-bottom: 20px;
+}
+
+.course-overview p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666; /* Slightly lighter color for the text */
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #0056b3; /* Example primary color */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #003d82; /* Darker shade for hover effect */
+}
+
+/* Ensure FontAwesome icon is properly sized and aligned */
+.course-overview i {
+    margin-right: 10px;
+}
+
+.schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 30px; /* Add some space after the hero section */
+}
+
+.schedule-column {
+    flex: 1;
+    min-width: 250px; /* Ensures that the layout is responsive */
+}
+
+.schedule-column:last-child {
+    margin-right: 0; /* Removes margin from the last column */
+}
+
+.card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+  
+.card:hover {
+    transform: translateY(-5px);
+}
+  
+.card-image {
+    width: 100%;
+    height: 150px; /* Fixed height, or use padding-top for a responsive height */
+    background-size: cover;
+    background-position: center;
+}
+  
+.lecture-img {
+    background-image: url('path-to-lecture-image.jpg');
+}
+  
+.tutorial-img {
+    background-image: url('path-to-tutorial-image.jpg');
+}
+  
+.resource-img {
+    background-image: url('path-to-resource-image.jpg');
+}
+  
+.assignments {
+    width: 100%; /* Full width */
+    background: #f9f9f9; /* Light background for differentiation */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent with card styles */
+    margin-top: 20px; /* Space from the schedule blocks */
+}
+
+.assignments .card.assignment {
+    background: #fff;
+    padding: 10px 20px; /* Smaller padding for a less tall card */
+    height: 80px; /* Shorter height for the assignment block */
+    margin: 0; /* Reset any margins */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Consistent with other cards */
+}
+
+.card-content {
+    padding: 15px;
+}
+  
+.card-date {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+}
+  
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+  
+.card-description {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+  
+  /* Responsive Design */
+@media (max-width: 960px) {
+    /* Schedule columns drop into a single column layout */
+    .schedule-container {
+        flex-direction: column;
+    }
+
+    .schedule-column {
+        width: 100%; /* Each column takes full width */
+        margin-right: 0; /* Reset margin right */
+    }
+}
+
+@media (max-width: 600px) {
+    /* Adjust hero section and navigation for smaller screens */
+    /* ... */
+
+    /* For very small screens, reduce padding/margin to save space */
+    .schedule-container,
+    .assignments {
+        padding: 10px;
+    }
+}
+
+.team-section {
+    text-align: center;
+    background: #4b2e83; /* Or any background color you prefer */
+    padding: 50px 0;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between team member profiles */
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 220px; /* Adjust width as necessary */
+    color: #fff;
+}
+
+.profile-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.team-member img {
+    width: 100%; /* Adjust as needed */
+    border-radius: 50%; /* Circular image */
+    border: 5px solid white; /* White border around the image */
+}
+
+.circles-background {
+    position: absolute;
+    top: -10px; /* Adjust as necessary */
+    left: -10px; /* Adjust as necessary */
+    width: calc(100% + 20px); /* Larger than the image */
+    height: calc(100% + 20px); /* Larger than the image */
+    background: url('path-to-concentric-circles.png'); /* Path to your concentric circles image */
+    background-size: cover;
+    border-radius: 50%; /* Circular shape */
+    z-index: -1;
+}
+
+h3 {
+    margin: 10px 0 5px; /* Adjust spacing as necessary */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icons a {
+    color: #ffc700; /* Adjust color to match your design */
+    font-size: 1.2rem; /* Adjust icon size as necessary */
+}
+
+/* Add any necessary media queries to ensure responsiveness */
+
+  
+
+/* Continue styling rest of your sections and footer */
